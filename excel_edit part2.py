@@ -45,7 +45,7 @@ print(f' в файле {row_count} {text}')
 #Отправляем на почту
 
 sender = "yurymiheev@yandex.ru"
-password = 'jtdobkrxstpdiwjo'
+password = 'jtdobkrxstpdiwjo'   #одноразовый удаляемый пароль
 server = smtplib.SMTP("smtp.yandex.ru", 465)
 server.starttls()
 msg = MIMEText()
