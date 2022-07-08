@@ -15,11 +15,11 @@ for i in range(2, row_count + 1):
 #Меняем формат ячеек"
 for a in ["B", "D", "G", "I"]:
     for i in range(2, row_count + 1):
-        tmp = '-' if sheet[f'{a}{i}'].value == '-' else int(sheet[f'{a}{i}'].value) / 100000
+        tmp = '-' if sheet[f'{a}{i}'].value == '-' else int(sheet[f'{a}{i}'].value) / 10000
         sheet[f'{a}{i}'] = tmp
-        sheet[f'{a}{i}'].number_format = BUILTIN_FORMATS[7]
+        sheet[f'{a}{i}'].number_format = '"₽"#,##0.0000_);("₽"#,##0.0000)'
 print("Меняем формат ячеек")
-
+print(BUILTIN_FORMATS[7])
 #Меняем ширину столбцов"
 for ind, col in enumerate(sheet.columns):
     max_len = 0
